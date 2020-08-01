@@ -17,18 +17,18 @@ $block1_sectioncards	= get_field('block1_sectioncards');
 </div>
 
                     <div class="sectionCardsBlock">
-					<div class="specials">
-<?php $loop = new \WP_Query( array( 'post_type' => 'specials', 'orderby' => 'post_id', 'order' => 'ASC' ) ); ?>
+					<div class="phone_number">
+<?php $loop = new \WP_Query( array( 'post_type' => 'phone_number', 'orderby' => 'post_id', 'order' => 'ASC' ) ); ?>
 
 				<?php while( $loop->have_posts() ) : $loop->the_post();
-				$special_title	= get_field('special_title');
-				$special_img	= get_field('special_img');
+				$mobile-phone-number-txt	= get_field('mobile-phone-number-txt');
+				$mobile-phone-number-link	= get_field('mobile-phone-number-link');
 				$special_link	= get_field('special_link');
 				?>
 				<div class="sectionCard" id="<?php echo $sectioncard_id; ?>">
-						<amp-img lightbox src="<?php echo $special_img['url']; ?>" width="1000"
-										height="800" layout="responsive" alt="<?php echo $special_img['alt']; ?>" class=""></amp-img>
-										<h3 class="mb1"><?php echo $special_title; ?></h3>
+						<amp-img lightbox src="<?php echo $mobile-phone-number-link['url']; ?>" width="1000"
+										height="800" layout="responsive" alt="<?php echo $mobile-phone-number-link['alt']; ?>" class=""></amp-img>
+										<h3 class="mb1"><?php echo $mobile-phone-number-txt; ?></h3>
                             <div class="ctaButton"><a
                                     class="ampstart-btn caps text-decoration-none inline-block"
                                     href="<?php echo $special_link; ?>">Learn More</a></div>
